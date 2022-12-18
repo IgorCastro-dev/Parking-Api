@@ -1,5 +1,9 @@
 package com.api.parkingcontrol.services;
 
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,5 +37,15 @@ public class ParkingSpotService {
 	public boolean existsByApartmentAndBlock(String apartment, String block) {
 		// TODO Auto-generated method stub
 		return parkingSpotRepository.existsByApartmentAndBlock(apartment,block);
+	}
+
+	public List<ParkingSpotModel> findAll() {
+		// TODO Auto-generated method stub
+		return parkingSpotRepository.findAll();
+	}
+
+	public Optional<ParkingSpotModel> findById(UUID id) {
+		// TODO Auto-generated method stub
+		return parkingSpotRepository.findById(id);
 	}
 }
