@@ -48,4 +48,9 @@ public class ParkingSpotService {
 		// TODO Auto-generated method stub
 		return parkingSpotRepository.findById(id);
 	}
+
+	public void delete(ParkingSpotModel parkingSpotModel) {
+		// TODO Auto-generated method stub
+		parkingSpotRepository.delete(parkingSpotModel);
+	}
 }
